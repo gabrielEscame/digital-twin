@@ -4,7 +4,7 @@ import useIK from './hooks/useIK'
 const Robot = () => {
   const { scene } = useGLTF('/models/robot_arm.glb')
 
-  useIK({ scene })
+  useIK(scene)
   return <primitive object={scene} />
 }
 
