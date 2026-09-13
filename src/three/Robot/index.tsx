@@ -5,6 +5,7 @@ const Robot = () => {
   const { scene } = useGLTF('/models/robot_arm.glb')
 
   useIK(scene)
+  
   return <primitive object={scene} />
 }
 
