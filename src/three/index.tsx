@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { Grid, OrbitControls, Environment } from '@react-three/drei'
+import { Grid, Environment } from '@react-three/drei'
 
 import Robot from './Robot'
 
@@ -13,8 +13,6 @@ function Scene() {
         }}
       >
         <Grid infiniteGrid />
-
-        <OrbitControls makeDefault />
 
         <Environment preset="warehouse" environmentIntensity={0.7} />
 
