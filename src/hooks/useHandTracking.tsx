@@ -5,6 +5,7 @@ import { type NormalizedLandmark } from '@mediapipe/tasks-vision'
 const useHandTracking = () => {
   const wristRef = useRef({ x: 0, y: 0, z: 0 })
   const gripRef = useRef(0)
+  const handDetectedRef = useRef(false)
 
   useEffect(() => {
     let stream: MediaStream | null = null
@@ -24,6 +25,9 @@ const useHandTracking = () => {
       if (hand) {
         wristRef.current = hand[0]
         gripRef.current = calculateGrip(hand)
+        handDetectedRef.current = true
+      } else {
+        handDetectedRef.current = false
       }
 
       videoFrameCallbackId = video.requestVideoFrameCallback(detect)
@@ -62,7 +66,8 @@ const useHandTracking = () => {
 
   return {
     wristRef,
-    gripRef
+    gripRef,
+    handDetectedRef
   }
 }
 
