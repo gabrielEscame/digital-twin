@@ -1,0 +1,28 @@
+import { useRobotTelemetryContext } from '../../../context/robotTelemetryContext'
+import Readout from './Readout'
+
+export default function MotorReadouts() {
+  const { telemetry } = useRobotTelemetryContext()
+
+  return (
+    <>
+      <div className="pointer-events-none absolute bottom-4 left-4 z-10 grid gap-4 md:bottom-auto md:left-8 md:top-1/2 md:-translate-y-1/2 md:gap-6">
+        {['A', 'B', 'C'].map((axis, index) => (
+          <div key={axis}>
+            <p className="text-[10px] text-[#8181A5]">Axis {axis} Motor</p>
+            <p className="mt-1 text-xl font-bold text-[#1C1D21]">
+              {telemetry.temperatures[index].toFixed(1)} <span className="text-[10px]">°C</span>
+              <br />
+              {Math.round(telemetry.jointRpm[index])} <span className="text-[10px]">rpm</span>
+            </p>
+          </div>
+        ))}
+      </div>
+      <div className="pointer-events-none absolute bottom-4 right-4 z-10 grid gap-4 text-right md:bottom-auto md:right-8 md:top-1/2 md:-translate-y-1/2 md:gap-6 md:text-left">
+        <Readout label="Fan speed" value={Math.round(telemetry.fanSpeed)} unit="rpm" />
+        <Readout label="CPU temp" value={telemetry.cpuTemp.toFixed(1)} unit="°C" />
+        <Readout label="Mainboard temp" value={telemetry.mainboardTemp.toFixed(1)} unit="°C" />
+      </div>
+    </>
+  )
+}
