@@ -9,11 +9,11 @@ export default function MotorReadouts() {
       <div className="pointer-events-none absolute bottom-4 left-4 z-10 grid gap-4 md:bottom-auto md:left-8 md:top-1/2 md:-translate-y-1/2 md:gap-6">
         {['A', 'B', 'C'].map((axis, index) => (
           <div key={axis}>
-            <p className="text-[10px] text-[#8181A5]">Axis {axis} Motor</p>
-            <p className="mt-1 text-xl font-bold text-[#1C1D21]">
-              {telemetry.temperatures[index].toFixed(1)} <span className="text-[10px]">°C</span>
+            <p className="text-micro text-muted-text">Axis {axis} Motor</p>
+            <p className="mt-1 text-xl font-bold text-primary-text">
+              {telemetry.temperatures[index].toFixed(1)} <span className="text-micro">°C</span>
               <br />
-              {Math.round(telemetry.jointRpm[index])} <span className="text-[10px]">rpm</span>
+              {Math.round(telemetry.jointRpm[index])} <span className="text-micro">rpm</span>
             </p>
           </div>
         ))}

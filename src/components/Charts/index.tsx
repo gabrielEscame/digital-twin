@@ -7,12 +7,12 @@ export default function Charts() {
   const { telemetry } = useRobotTelemetryContext()
 
   return (
-    <div className="grid min-w-0 gap-7">
+    <div className="grid min-w-0 gap-dashboard-gap">
       <GraphCard title="Speed">
-        <HistoryChart data={telemetry.speedHistory} dataKey="speed" color="#a78bfa" />
+        <HistoryChart data={telemetry.speedHistory} dataKey="speed" color="var(--color-chart-speed)" />
       </GraphCard>
       <GraphCard title="Torque">
-        <HistoryChart data={telemetry.torqueHistory} dataKey="torque" color="#6DA4E4" />
+        <HistoryChart data={telemetry.torqueHistory} dataKey="torque" color="var(--color-chart-torque)" />
       </GraphCard>
       <GraphCard title="Time Distribution">
         <TimeDistribution distribution={telemetry.timeDistribution} />

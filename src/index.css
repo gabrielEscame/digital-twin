@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme static {
+  --color-app-bg: #eaeaf5;
+  --color-surface: #fafafd;
+  --color-panel-border: #d9d9e7;
+  --color-primary-text: #1c1d21;
+  --color-muted-text: #8181a5;
+  --color-chart-speed: #a78bfa;
+  --color-chart-torque: #6da4e4;
+  --color-state-idle: #eab308;
+  --color-state-running: #4ade80;
+  --color-state-gripping: #60a5fa;
+
+  --text-micro: 0.625rem;
+  --spacing-dashboard-gap: 1.75rem;
+}

@@ -1,12 +1,12 @@
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 import type { RobotTelemetry } from '../../../three/Robot/hooks/useRobotTelemetry'
 
-const axisTick = { fontSize: 12, fill: '#8181A5' }
+const axisTick = { fontSize: 12, fill: 'var(--color-muted-text)' }
 
 const states = [
-  { name: 'Idle', key: 'idle', color: '#eab308' },
-  { name: 'Running', key: 'running', color: '#4ade80' },
-  { name: 'Gripping', key: 'gripping', color: '#60a5fa' }
+  { name: 'Idle', key: 'idle', color: 'var(--color-state-idle)' },
+  { name: 'Running', key: 'running', color: 'var(--color-state-running)' },
+  { name: 'Gripping', key: 'gripping', color: 'var(--color-state-gripping)' }
 ] as const
 
 export default function TimeDistribution({ distribution }: { distribution: RobotTelemetry['timeDistribution'] }) {
@@ -14,7 +14,7 @@ export default function TimeDistribution({ distribution }: { distribution: Robot
     <div className="flex h-full flex-col">
       <div className="flex flex-wrap gap-x-4 gap-y-1">
         {states.map(({ name, color }) => (
-          <div key={name} className="flex items-center gap-1.5 text-[11px] text-[#8181A5]">
+          <div key={name} className="flex items-center gap-1.5 text-[11px] text-muted-text">
             <span className="h-[7px] w-[7px] rounded-full" style={{ backgroundColor: color }} />
             {name}
           </div>

@@ -1,6 +1,6 @@
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 
-const axisTick = { fontSize: 12, fill: '#8181A5' }
+const axisTick = { fontSize: 12, fill: 'var(--color-muted-text)' }
 
 export default function HistoryChart({ data, dataKey, color }: {
   data: { time: string; speed?: number; torque?: number }[]
