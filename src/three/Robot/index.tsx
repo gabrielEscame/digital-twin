@@ -1,10 +1,10 @@
 import { useGLTF } from '@react-three/drei'
 import useIK from './hooks/useIK'
-import useHandTracking from '../../hooks/useHandTracking'
+import useHandTracking from 'hooks/useHandTracking'
 import useRobotTelemetry from './hooks/useRobotTelemetry'
 import { useEffect } from 'react'
 
-import { useRobotTelemetryContext } from '../../context/robotTelemetryContext'
+import { useRobotTelemetryContext } from 'context/robotTelemetryContext'
 
 const Robot = () => {
   const { scene } = useGLTF('/models/robot_arm.glb')

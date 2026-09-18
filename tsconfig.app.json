@@ -10,6 +10,13 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "context/*": ["./src/context/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "three/*": ["./src/three/*"],
+      "tracking/*": ["./src/tracking/*"]
+    },
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",

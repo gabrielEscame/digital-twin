@@ -1,5 +1,5 @@
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from 'recharts'
-import type { RobotTelemetry } from '../../../three/Robot/hooks/useRobotTelemetry'
+import type { RobotTelemetry } from 'three/Robot/hooks/useRobotTelemetry'
 
 const axisTick = { fontSize: 12, fill: 'var(--color-muted-text)' }
 

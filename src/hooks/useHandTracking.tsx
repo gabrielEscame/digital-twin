@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { HandTracker } from '../tracking/HandTracker'
+import { HandTracker } from 'tracking/HandTracker'
 import { type NormalizedLandmark } from '@mediapipe/tasks-vision'
 
 const useHandTracking = () => {

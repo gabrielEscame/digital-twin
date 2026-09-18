@@ -2,7 +2,7 @@ import { useFrame } from '@react-three/fiber'
 
 import * as THREE from 'three'
 import { useEffect, useRef, type RefObject } from 'react'
-import { IK, type JointConfig } from '../../utils/IK'
+import { IK, type JointConfig } from 'three/utils/IK'
 
 type GLTFScene = THREE.Group<THREE.Object3DEventMap>
 

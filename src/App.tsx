@@ -1,6 +1,6 @@
-import Stats from './components/Stats'
-import Charts from './components/Charts'
-import RobotPanel from './components/RobotPanel'
+import Stats from 'components/Stats'
+import Charts from 'components/Charts'
+import RobotPanel from 'components/RobotPanel'
 
 function App() {
   return (

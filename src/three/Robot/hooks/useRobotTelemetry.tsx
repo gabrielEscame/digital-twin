@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
-import type useHandTracking from '../../../hooks/useHandTracking'
+import type useHandTracking from 'hooks/useHandTracking'
 import type useIK from './useIK'
 
 interface SpeedPoint {

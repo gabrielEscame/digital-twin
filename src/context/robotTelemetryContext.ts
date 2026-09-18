@@ -1,5 +1,5 @@
 import { createContext, useContext, type Dispatch, type SetStateAction } from 'react'
-import type { RobotTelemetry } from '../three/Robot/hooks/useRobotTelemetry'
+import type { RobotTelemetry } from 'three/Robot/hooks/useRobotTelemetry'
 
 export interface RobotTelemetryContextValue {
   telemetry: RobotTelemetry

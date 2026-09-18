@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import App from './App'
-import { RobotTelemetryProvider } from './context/robotTelemetryProvider'
+import { RobotTelemetryProvider } from 'context/robotTelemetryProvider'
 
 import './index.css'
 

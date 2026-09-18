@@ -1,4 +1,4 @@
-import { useRobotTelemetryContext } from '../../../context/robotTelemetryContext'
+import { useRobotTelemetryContext } from 'context/robotTelemetryContext'
 import Readout from './Readout'
 
 export default function MotorReadouts() {

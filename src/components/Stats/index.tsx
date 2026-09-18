@@ -1,4 +1,4 @@
-import { useRobotTelemetryContext } from '../../context/robotTelemetryContext'
+import { useRobotTelemetryContext } from 'context/robotTelemetryContext'
 import InfoCard from './components/InfoCard'
 
 export default function Stats() {

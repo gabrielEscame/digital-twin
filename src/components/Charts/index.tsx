@@ -1,4 +1,4 @@
-import { useRobotTelemetryContext } from '../../context/robotTelemetryContext'
+import { useRobotTelemetryContext } from 'context/robotTelemetryContext'
 import GraphCard from './components/GraphCard'
 import HistoryChart from './components/HistoryChart'
 import TimeDistribution from './components/TimeDistribution'

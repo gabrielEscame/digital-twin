@@ -1,4 +1,4 @@
-import Scene from '../../three'
+import Scene from 'three/index'
 import MotorReadouts from './components/MotorReadouts'
 
 export default function RobotPanel() {
